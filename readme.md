@@ -25,7 +25,7 @@ One day all these servers that have ChestShop on them are going to crush us all.
 - Don't have a web server supporting PHP and MySQL
 - Only use ChestShop or a ChestShop like plugin for the "Admin Shop" feature (WebShop doesn't have that)
 
-## Contributing to Laravel
+## Contributing to WebShop
 To contribute, just fork this repository and make changes, then send a pull request. You should use these conventions in order to get your pull request approved:
 
 - PHP
