@@ -31,7 +31,7 @@ To contribute, just fork this repository and make changes, then send a pull requ
 - PHP
     * Use Allman style braces
     * Use camelCase for functions and variables
-    * Use four spaces instead of tabs
+    * Use two spaces instead of tabs
     * Capitalize class names and lowercase file names
     * Don't stick your stupid IDE files into the repo
     * Don't break anything
