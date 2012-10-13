@@ -37,6 +37,12 @@
  */
 use lithium\data\Connections;
 
+Connections::add('dev', array(
+  'type' => 'database',
+  'adapter' => 'Sqlite3',
+  'database' => ':memory:'
+));
+
 /**
  * Uncomment this configuration to use MongoDB as your default database.
  */
