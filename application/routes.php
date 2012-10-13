@@ -40,7 +40,7 @@ Route::get('/', function()
 	return View::make('home.index');
 });
 
-Route::get('/niggert', array('as' => '/niggert', function()
+Route::get('/test', array('as' => 'testroute', function()
 {
     return View::make('home.index');
 }));
