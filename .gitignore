@@ -1,5 +1,7 @@
-# OS or Editor folders
 .DS_Store
+app/libraries/*
+app/resources/tmp/*
+.*.sw[op]
 Thumbs.db
 .cache
 .project
