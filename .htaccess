@@ -1,0 +1,14 @@
+<Directory app>
+    order allow,deny
+    deny from all
+</Directory>
+
+<Directory lib>
+    order allow,deny
+    deny from all
+</Directory>
+
+<Directory conf>
+    order allow,deny
+    deny from all
+</Directory>
