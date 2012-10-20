@@ -1,6 +1,9 @@
 <?php
 require('lib/php_error.php');
-require('views/View.php');
+require('app/views/View.php');
+require('app/Routes.php');
+
+$routes = new Routes();
 
 $conf = json_decode(file_get_contents('conf/config.json'), true);
 $env = $conf['system']['environment'];
