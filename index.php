@@ -10,7 +10,7 @@ if ($env == 'development')
     \php_error\reportErrors();
 }
 
-if (!(isset($_REQUEST['page'])) && $_REQUEST['page'] != null)
+if (!(isset($_REQUEST['page'])) && $_REQUEST['page'] == null)
 {
     View::render_to_response('home', array(
         'name' => 'denny'
