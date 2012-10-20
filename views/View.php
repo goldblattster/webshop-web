@@ -26,7 +26,7 @@ class View extends Smarty
             $view->assign($key, $value);
         }
 
-        $view->display($viewName + '.tpl');
+        $view->display($viewName . '.tpl');
     }
 
     public static function get_current_page(/*$viewName*/)
