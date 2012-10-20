@@ -1,7 +1,7 @@
 <?php
 require('lib/php_error.php');
 
-$conf = json_decode(file_get_contents('conf/config.json', TRUE));
+$conf = json_decode(file_get_contents('conf/config.json'), true);
 $env = $conf['system']['environment'];
 
 if ($env == 'development')
