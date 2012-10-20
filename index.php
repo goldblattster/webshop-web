@@ -1,5 +1,6 @@
 <?php
 require('lib/php_error.php');
+require('views/View.php');
 
 $conf = json_decode(file_get_contents('conf/config.json'), true);
 $env = $conf['system']['environment'];
