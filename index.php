@@ -1,13 +1,30 @@
 <?php
-require_once('lib/Smarty.class.php');
+require('lib/php_error.php');
 
-$smarty = new Smarty();
+$conf = json_decode(file_get_contents('conf/config.json'));
+$env = $conf['system']['environment'];
 
-$smarty->setTemplateDir('templates');
-$smarty->setCompileDir('templates/compiled');
-$smarty->setConfigDir('conf');
-$smarty->setCacheDir('cache');
+if ($env == 'development')
+{
+    \php_error\reportErrors();
+}
 
-$smarty->assign('name', 'Ned');
+if (!(isset($_REQUEST['page'])) && $_REQUEST['page'] != null)
+{
+    View::render_to_response('home', array(
+        'name' => 'denny'
+    ));
+} else
+{
+    $viewParams = array();
 
-$smarty->display('index.tpl');
+    foreach ($_REQUEST as $key => $value)
+    {
+        if ($key != 'page')
+        {
+            $viewParams[$key] = $value;
+        }
+    }
+
+    View::render_to_response($_REQUEST['page'], $viewParams);
+}
