@@ -12,7 +12,7 @@ if ($env == 'development')
 
 if (!(isset($_REQUEST['page'])) && $_REQUEST['page'] == null)
 {
-    View::render_to_response('home', array(
+    View::render_to_response('index', array(
         'name' => 'denny'
     ));
 } else
