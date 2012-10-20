@@ -20,6 +20,11 @@ class Routes
         if (array_key_exists($route, $this->routes))
         {
             call_user_func(array('Views', $this->routes[$route]), $request);
+
+
+        } else
+        {
+            echo("lol debug message");
         }
     }
 }
