@@ -12,14 +12,14 @@ class Routes
 
     public function addRoute($route, $viewName)
     {
-        $route[$route] = 'Views::' . $viewName . '($request)';
+        $route[$route] = $viewName;
     }
 
     public function callView($route, $request=array())
     {
         if (array_key_exists($route, $this->routes))
         {
-            call_user_func($this->routes[$route]);
+            call_user_func(array('Views', $this->routes[$route]), $request);
         }
     }
 }
