@@ -1,5 +1,5 @@
 <?php
-require(dirname(__FILE__) . '../lib/Smarty.class.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/lib/Smarty.class.php');
 
 class View extends Smarty
 {
