@@ -1,8 +1,8 @@
 <?php
-require(dirname(__FILE__) . '/lib/php_error/php_error.php');
+require_once(dirname(__FILE__) . '/lib/php_error/php_error.php');
 
-require(dirname(__FILE__) . '/app/Routes.php');
-require(dirname(__FILE__) . '/app/Templates.php');
+require_once(dirname(__FILE__) . '/app/Routes.php');
+require_once(dirname(__FILE__) . '/app/Templates.php');
 
 /*
  * ROUTE DEFINITIONS

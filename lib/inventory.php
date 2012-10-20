@@ -1,5 +1,5 @@
 <?php
-require(dirname(__FILE__) . "/ItemStack.php");
+require_once(dirname(__FILE__) . "/ItemStack.php");
 
 class Inventory {
     private $items;

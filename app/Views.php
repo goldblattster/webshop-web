@@ -1,5 +1,5 @@
 <?php
-require(dirname(__FILE__) . '/Templates.php');
+require_once(dirname(__FILE__) . '/Templates.php');
 
 class Views
 {

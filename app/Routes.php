@@ -1,5 +1,5 @@
 <?php
-require(dirname(__FILE__) . '/Views.php');
+require_once(dirname(__FILE__) . '/Views.php');
 
 class Routes
 {
