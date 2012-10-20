@@ -1,11 +1,13 @@
 <?php
-/**
- * Lithium: the most rad php framework
- *
- * @copyright     Copyright 2012, Union of RAD (http://union-of-rad.org)
- * @license       http://opensource.org/licenses/bsd-license.php The BSD License
- */
+require_once('lib/Smarty.class.php');
 
-require 'app/webroot/index.php';
+$smarty = new Smarty();
 
-?>
+$smarty->setTemplateDir('templates');
+$smarty->setTemplateDir('templates_c');
+$smarty->setTemplateDir('conf');
+$smarty->setTemplateDir('cache');
+
+$smarty->assign('name', 'Ned');
+
+$smarty->display('index.tpl');
