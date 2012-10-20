@@ -7,10 +7,10 @@ class Template extends Smarty
     {
         parent::__construct();
 
-        $this->setTemplateDir('../templates');
-        $this->setCompileDir('../templates/compiled');
-        $this->setConfigDir('../../conf');
-        $this->setCacheDir('../cache');
+        $this->setTemplateDir('./templates');
+        $this->setCompileDir('./templates/compiled');
+        $this->setConfigDir('./../conf');
+        $this->setCacheDir('./cache');
 
         $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
         $this->assign('app_name', 'WebShop');
