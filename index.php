@@ -1,6 +1,6 @@
 <?php
 require('lib/php_error.php');
-require('app/views/View.php');
+require('app/Templates.php');
 require('app/Routes.php');
 
 $routes = new Routes();
@@ -15,20 +15,20 @@ if ($env == 'development')
 
 if (!(isset($_REQUEST['page'])) && $_REQUEST['page'] == null)
 {
-    View::render_to_response('index', array(
+    Template::render_to_response('index', array(
         'name' => 'denny'
     ));
 } else
 {
-    $viewParams = array();
+    $templateParams = array();
 
     foreach ($_REQUEST as $key => $value)
     {
         if ($key != 'page')
         {
-            $viewParams[$key] = $value;
+            $templateParams[$key] = $value;
         }
     }
 
-    View::render_to_response($_REQUEST['page'], $viewParams);
+    Template::render_to_response($_REQUEST['page'], $templateParams);
 }

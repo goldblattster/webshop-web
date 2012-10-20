@@ -1,7 +1,7 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/lib/Smarty.class.php');
 
-class View extends Smarty
+class Template extends Smarty
 {
     function __construct()
     {
@@ -16,20 +16,20 @@ class View extends Smarty
         $this->assign('app_name', 'WebShop');
     }
 
-    public static function render_to_response($viewName, $params)
+    public static function render_to_response($templateName, $params)
     {
-        $view = new View();
-        $viewName = str_replace('#', '/', $viewName);
+        $template = new Template();
+        $templateName = str_replace('#', '/', $templateName);
 
         foreach ($params as $key => $value)
         {
-            $view->assign($key, $value);
+            $template->assign($key, $value);
         }
 
-        $view->display($viewName . '.tpl');
+        $template->display($templateName . '.tpl');
     }
 
-    public static function get_current_page(/*$viewName*/)
+    public static function get_current_page(/*$templateName*/)
     {
         $url = 'http';
         if ($_SERVER['HTTPS'] == 'on')
