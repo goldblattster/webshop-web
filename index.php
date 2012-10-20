@@ -1,9 +1,15 @@
 <?php
-require('lib/php_error.php');
-require('app/Templates.php');
-require('app/Routes.php');
+require(dirname(__FILE__) . '/lib/php_error/php_error.php');
 
+require(dirname(__FILE__) . '/app/Routes.php');
+require(dirname(__FILE__) . '/app/Views.php');
+require(dirname(__FILE__) . '/app/Templates.php');
+
+/*
+ * ROUTE DEFINITIONS
+ */
 $routes = new Routes();
+$routes->addRoute('index', 'index');
 
 $conf = json_decode(file_get_contents('conf/config.json'), true);
 $env = $conf['system']['environment'];
@@ -15,20 +21,8 @@ if ($env == 'development')
 
 if (!(isset($_REQUEST['page'])) && $_REQUEST['page'] == null)
 {
-    Template::render_to_response('index', array(
-        'name' => 'denny'
-    ));
+    $routes->callView('index', $_REQUEST);
 } else
 {
-    $templateParams = array();
-
-    foreach ($_REQUEST as $key => $value)
-    {
-        if ($key != 'page')
-        {
-            $templateParams[$key] = $value;
-        }
-    }
-
-    Template::render_to_response($_REQUEST['page'], $templateParams);
+    $routes->callView($_REQUEST['page'], $_REQUEST);
 }
