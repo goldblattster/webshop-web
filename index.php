@@ -2,7 +2,6 @@
 require(dirname(__FILE__) . '/lib/php_error/php_error.php');
 
 require(dirname(__FILE__) . '/app/Routes.php');
-require(dirname(__FILE__) . '/app/Views.php');
 require(dirname(__FILE__) . '/app/Templates.php');
 
 /*
