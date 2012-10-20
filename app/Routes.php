@@ -22,7 +22,8 @@ class Routes
             call_user_func(array('Views', $this->routes[$route]), $request);
         } else
         {
-            echo("lol debug message");
+            // TODO: Implement actual errors
+            echo("lol that view doesn't exist");
         }
     }
 }

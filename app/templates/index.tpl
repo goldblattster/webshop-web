@@ -1,3 +1,7 @@
-{* Smarty *}
+{extends file="base.tpl"}
 
-Hello {$name}, welcome to Smarty!
+{block name=title}Home{/block}
+
+{block name=content}
+Hello, {$name}!
+{/block}
