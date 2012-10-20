@@ -1,14 +1,17 @@
 <Directory app>
     order allow,deny
     deny from all
+    allow from 127.0.0.1
 </Directory>
 
 <Directory lib>
     order allow,deny
     deny from all
+    allow from 127.0.0.1
 </Directory>
 
 <Directory conf>
     order allow,deny
     deny from all
+    allow from 127.0.0.1
 </Directory>
