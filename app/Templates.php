@@ -1,5 +1,5 @@
 <?php
-require($_SERVER['DOCUMENT_ROOT'] . '/lib/Smarty.class.php');
+require(dirname(__FILE__) . '/../lib/Smarty.class.php');
 
 class Template extends Smarty
 {
@@ -7,10 +7,10 @@ class Template extends Smarty
     {
         parent::__construct();
 
-        $this->setTemplateDir('./templates');
-        $this->setCompileDir('./templates/compiled');
-        $this->setConfigDir('./../conf');
-        $this->setCacheDir('./cache');
+        $this->setTemplateDir(dirname(__FILE__) . '/templates');
+        $this->setCompileDir(dirname(__FILE__) . '/templates/compiled');
+        $this->setConfigDir(dirname(__FILE__) . '/../conf');
+        $this->setCacheDir(dirname(__FILE__) . '/cache');
 
         $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
         $this->assign('app_name', 'WebShop');
