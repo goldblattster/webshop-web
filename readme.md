@@ -28,21 +28,12 @@ One day all these servers that have ChestShop on them are going to crush us all.
 ## Contributing to WebShop
 To contribute, just fork this repository and make changes, then send a pull request. You should use these conventions in order to get your pull request approved:
 
-- PHP
-    * Use Allman style braces
-    * Use camelCase for functions and variables
-    * Use two spaces instead of tabs
-    * Capitalize class names and lowercase file names
-    * Don't stick your stupid IDE files into the repo
-    * Don't break anything
-- Java
-    * Use K&R style braces
-    * Use camelCase for methods and variables
-    * Use four spaces instead of tabs
-    * Capitalize class names
-    * Don't stick your stupid IDE files into the repo, use maven
-    * Don't break anything
-    * When in doubt use oracle coding conventions
+* Use Allman style braces
+* Use camelCase for functions and variables
+* Use two spaces instead of tabs
+* Capitalize class names and lowercase file names
+* Don't stick your stupid IDE files into the repo
+* Don't break anything
 
 ## License
 WebShop is open-sourced under the BSD License.

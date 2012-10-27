@@ -27,8 +27,8 @@
 
   <nav id="nav-top-right">
     <ul class="button-group radius">
-      <li><a href="/accounts/log-in" class="button radius">Log In</a></li>
-      <li><a href="/accounts/register" class="button radius">Register</a></li>
+      <li><a href="index.php?page=login" class="button radius">Log In</a></li>
+      <li><a href="index.php?page=logout" class="button radius">Register</a></li>
     </ul>
   </nav>
 </header>
