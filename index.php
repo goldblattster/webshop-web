@@ -8,7 +8,9 @@ require_once(dirname(__FILE__) . '/app/Templates.php');
  * ROUTE DEFINITIONS
  */
 $routes = new Routes();
-$routes->addRoute('index', 'index');
+$routes->addRouteSimple('index');
+$routes->addRouteSimple('login');
+$routes->addRouteSimple('register');
 
 $conf = json_decode(file_get_contents('conf/config.json'), true);
 $env = $conf['system']['environment'];

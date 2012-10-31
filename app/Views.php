@@ -9,4 +9,18 @@ class Views
             'name' => 'Denny'
         ));
     }
+
+    public static function login($request)
+    {
+        Template::render_to_response('login', array(
+
+        ));
+    }
+
+    public static function register($request)
+    {
+        Template::render_to_response('register', array(
+
+        ));
+    }
 }

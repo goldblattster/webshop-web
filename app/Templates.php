@@ -14,6 +14,7 @@ class Template extends Smarty
 
         $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
         $this->assign('app_name', 'WebShop');
+        $this->assign('helpers', new Helpers());
     }
 
     public static function render_to_response($templateName, $params)

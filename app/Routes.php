@@ -10,6 +10,11 @@ class Routes
         $this->routes = array();
     }
 
+    public function addRouteSimple($route)
+    {
+        $this->routes[$route] = $route;
+    }
+
     public function addRoute($route, $viewName)
     {
         $this->routes[$route] = $viewName;
