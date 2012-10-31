@@ -1,5 +1,6 @@
 <?php
 require_once(dirname(__FILE__) . '/../lib/smarty/Smarty.class.php');
+require_once(dirname(__FILE__) . 'templates/Helpers.php');
 
 class Template extends Smarty
 {
